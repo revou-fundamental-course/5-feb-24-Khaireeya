@@ -7,24 +7,31 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header id="navigation-bar">
-      <h3 id="logo">Ini Logo</h3>
-      <nav id="navigation">
-        <a href="">Lihat Hasil</a>
-        <a href="">Lihat Rumus</a>
-      </nav>
-    </header>
-    <main>
-      <div class="input-section">
-        <label class="" for="input-field">Calcius</label>
-        <input type="number" class="input-field" />
+    <div class="texts">
+      <h2>Konverter Suhu Online</h2>
+      <p>
+        Masukkan angka kedalam kotak input pertama, lalu klik tombol konversi
+        untuk melihat hasil konversi dan rumus kalkulasi
+      </p>
+    </div>
+    <div class="calculator">
+      <div id="temp-input">
+        <input type="number" placeholder="Celsius" id="calcIn" />
       </div>
-      <button class="convert-button">Konversi</button>
-      <div class="output-section">
-        <label class="" for="input-field">Calcius</label>
-        <br />
-        <input type="number" class="input-field" />
+      <div class="buttons">
+        <button id="tmblConvert" onclick="calculateTemp()">Konversi</button>
+        <button id="tmblReverse" onclick="toggleAndClear()">Reverse</button>
+        <button id="tmblReset" onclick="clearInput()">Reset</button>
       </div>
-    </main>
+      <div id="temp-output">
+        <input type="number" placeholder="Fahrenheit" id="calcOut" disabled />
+      </div>
+      <label for="formula">Rumus Kalkulasi</label>
+      <div id="formula">
+        <input type="text" id="calcFormula" placeholder="-" disabled />
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
   </body>
 </html>
