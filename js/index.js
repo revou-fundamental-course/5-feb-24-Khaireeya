@@ -26,17 +26,20 @@ function calculateTemp() {
     var result;
     console.log(conversionType);
   
-    if (conversionType == "Celsius") {
+    if (conversionType == "Celsius" && input1.value != "") {
       result = (inputTemp * 9/5) + 32;
       console.log("work");
       var inputElement = document.getElementById("calcOut"); 
       inputElement.value = result;
       formula.value = `${input2.value} °C = (${input1.value} °F - 32) * 5/9`
-    } else {
+    } else if (conversionType == "Fahrenheit" && input1.value != "") {
       result = parseInt((inputTemp - 32) * 5/9);
       console.log("not working");
       var inputElement = document.getElementById("calcOut"); 
       inputElement.value = result;
       formula.value = `${input2.value} °F = (${input1.value} °C * 9/5) + 32`
+    } else {
+      console.log("worksss")
+        return
     }
   }
